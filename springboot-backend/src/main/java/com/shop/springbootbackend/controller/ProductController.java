@@ -25,6 +25,7 @@ public class ProductController {
 		this.productService = productService;
 	}
 
+	//Build to post products
 	@PostMapping ()
 	public ResponseEntity<Product> saveProdct(@RequestBody Product product){
 		return new ResponseEntity<Product>(productService.saveProduct(product),HttpStatus.CREATED);
